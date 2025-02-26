@@ -1,0 +1,57 @@
+[0.007s] Invoking command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_gazebo': CMAKE_PREFIX_PATH=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description:/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_bringup:/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_gazebo:/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_application:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_RESOURCE_PATH=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake /home/benjamin/Documents/seniorProject/ros_ws/src/ros_gz_project_template/ros_gz_example_gazebo -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_gazebo
+[0.043s] -- The C compiler identification is GNU 13.3.0
+[0.077s] -- The CXX compiler identification is GNU 13.3.0
+[0.085s] -- Detecting C compiler ABI info
+[0.131s] -- Detecting C compiler ABI info - done
+[0.136s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.136s] -- Detecting C compile features
+[0.137s] -- Detecting C compile features - done
+[0.141s] -- Detecting CXX compiler ABI info
+[0.195s] -- Detecting CXX compiler ABI info - done
+[0.201s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.201s] -- Detecting CXX compile features
+[0.201s] -- Detecting CXX compile features - done
+[0.204s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.282s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.342s] -- Found ros_gz_example_description: 0.0.0 (/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/cmake)
+[0.351s] -- Looking for gz-plugin2 -- found version 2.0.3
+[0.352s] -- Searching for dependencies of gz-plugin2
+[0.353s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.353s] -- Searching for dependencies of gz-utils2
+[0.354s] -- Searching for <gz-utils2> component [cli]
+[0.355s] -- Looking for gz-utils2-cli -- found version 2.2.0
+[0.355s] -- Searching for dependencies of gz-utils2-cli
+[0.356s] -- Searching for <gz-plugin2> component [register]
+[0.357s] -- Looking for gz-plugin2-register -- found version 2.0.3
+[0.357s] -- Searching for dependencies of gz-plugin2-register
+[0.359s] -- Looking for gz-common5 -- found version 5.7.0
+[0.359s] -- Searching for dependencies of gz-common5
+[0.359s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.361s] -- Looking for dlfcn.h - found
+[0.367s] -- Looking for libdl - found
+[0.368s] -- Found DL: TRUE  
+[0.372s] -- Checking for module 'uuid'
+[0.381s] --   Found uuid, version 2.39.3
+[0.392s] -- Found UUID: TRUE  
+[0.392s] -- Searching for <gz-common5> component [profiler]
+[0.394s] -- Looking for gz-common5-profiler -- found version 5.7.0
+[0.394s] -- Searching for dependencies of gz-common5-profiler
+[0.402s] [31mCMake Error at CMakeLists.txt:26 (find_package):
+[0.402s]   By not providing "Findgz-sim7.cmake" in CMAKE_MODULE_PATH this project has
+[0.402s]   asked CMake to find a package configuration file provided by "gz-sim7", but
+[0.402s]   CMake did not find one.
+[0.402s] 
+[0.402s]   Could not find a package configuration file provided by "gz-sim7" with any
+[0.402s]   of the following names:
+[0.402s] 
+[0.402s]     gz-sim7Config.cmake
+[0.402s]     gz-sim7-config.cmake
+[0.402s] 
+[0.402s]   Add the installation prefix of "gz-sim7" to CMAKE_PREFIX_PATH or set
+[0.403s]   "gz-sim7_DIR" to a directory containing one of the above files.  If
+[0.403s]   "gz-sim7" provides a separate development package or SDK, be sure it has
+[0.403s]   been installed.
+[0.403s] 
+[0.403s] [0m
+[0.403s] -- Configuring incomplete, errors occurred!
+[0.407s] Invoked command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_gazebo' returned '1': CMAKE_PREFIX_PATH=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description:/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_bringup:/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_gazebo:/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_application:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_RESOURCE_PATH=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake /home/benjamin/Documents/seniorProject/ros_ws/src/ros_gz_project_template/ros_gz_example_gazebo -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_gazebo

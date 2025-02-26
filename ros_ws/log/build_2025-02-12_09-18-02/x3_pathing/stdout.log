@@ -1,0 +1,22 @@
+running egg_info
+writing ../../../build/x3_pathing/x3_pathing.egg-info/PKG-INFO
+writing dependency_links to ../../../build/x3_pathing/x3_pathing.egg-info/dependency_links.txt
+writing entry points to ../../../build/x3_pathing/x3_pathing.egg-info/entry_points.txt
+writing requirements to ../../../build/x3_pathing/x3_pathing.egg-info/requires.txt
+writing top-level names to ../../../build/x3_pathing/x3_pathing.egg-info/top_level.txt
+reading manifest file '../../../build/x3_pathing/x3_pathing.egg-info/SOURCES.txt'
+writing manifest file '../../../build/x3_pathing/x3_pathing.egg-info/SOURCES.txt'
+running build
+running build_py
+copying x3_pathing/draw_square.py -> /home/benjamin/Documents/seniorProject/ros_ws/build/x3_pathing/build/lib/x3_pathing
+running install
+running install_lib
+copying /home/benjamin/Documents/seniorProject/ros_ws/build/x3_pathing/build/lib/x3_pathing/draw_square.py -> /home/benjamin/Documents/seniorProject/ros_ws/install/x3_pathing/lib/python3.12/site-packages/x3_pathing
+byte-compiling /home/benjamin/Documents/seniorProject/ros_ws/install/x3_pathing/lib/python3.12/site-packages/x3_pathing/draw_square.py to draw_square.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/benjamin/Documents/seniorProject/ros_ws/install/x3_pathing/lib/python3.12/site-packages/x3_pathing-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../../build/x3_pathing/x3_pathing.egg-info to /home/benjamin/Documents/seniorProject/ros_ws/install/x3_pathing/lib/python3.12/site-packages/x3_pathing-0.0.0-py3.12.egg-info
+running install_scripts
+Installing draw_square script to /home/benjamin/Documents/seniorProject/ros_ws/install/x3_pathing/lib/x3_pathing
+writing list of installed files to '/home/benjamin/Documents/seniorProject/ros_ws/build/x3_pathing/install.log'

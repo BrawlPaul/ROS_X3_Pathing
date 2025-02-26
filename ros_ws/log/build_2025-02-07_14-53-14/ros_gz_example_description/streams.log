@@ -1,0 +1,129 @@
+[0.006s] Invoking command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/benjamin/Documents/seniorProject/ros_ws/src/ros_gz_project_template/ros_gz_example_description -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description
+[0.132s] -- The C compiler identification is GNU 13.3.0
+[0.216s] -- The CXX compiler identification is GNU 13.3.0
+[0.226s] -- Detecting C compiler ABI info
+[0.279s] -- Detecting C compiler ABI info - done
+[0.285s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.285s] -- Detecting C compile features
+[0.285s] -- Detecting C compile features - done
+[0.290s] -- Detecting CXX compiler ABI info
+[0.345s] -- Detecting CXX compiler ABI info - done
+[0.350s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.350s] -- Detecting CXX compile features
+[0.351s] -- Detecting CXX compile features - done
+[0.357s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.441s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.521s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.570s] -- Configuring done (0.6s)
+[0.572s] -- Generating done (0.0s)
+[0.573s] -- Build files have been written to: /home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description
+[0.577s] Invoked command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/benjamin/Documents/seniorProject/ros_ws/src/ros_gz_project_template/ros_gz_example_description -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description
+[0.577s] Invoking command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description -- -j6 -l6
+[0.600s] Invoked command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description -- -j6 -l6
+[0.601s] Invoking command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description
+[0.606s] -- Install configuration: ""
+[0.606s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models
+[0.606s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old
+[0.606s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/thumbnails
+[0.606s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/thumbnails/1.jpg
+[0.607s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/thumbnails/4.jpg
+[0.607s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/thumbnails/2.jpg
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/thumbnails/3.jpg
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/thumbnails/5.jpg
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/materials
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/materials/textures
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/materials/textures/spotlight.jpg
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/materials/textures/led.jpg
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/model.sdf
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes
+[0.608s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/vi_sensor.dae
+[0.636s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/led_lamp.dae
+[0.637s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/propeller_cw.dae
+[0.637s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/propeller_ccw.dae
+[0.637s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/iris.dae
+[0.662s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/spotlight.dae
+[0.662s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/vi_sensor.jpg
+[0.662s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/x3.dae
+[0.662s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/x3.jpg
+[0.662s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/led.dae
+[0.662s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/vi_camera.jpg
+[0.663s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/meshes/vi_camera.dae
+[0.663s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/X3 old/model.config
+[0.663s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/rrbot
+[0.663s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/rrbot/model.sdf
+[0.663s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url
+[0.663s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/thumbnails
+[0.663s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/thumbnails/1.jpg
+[0.664s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/thumbnails/4.jpg
+[0.664s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/thumbnails/2.jpg
+[0.664s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/thumbnails/3.jpg
+[0.664s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/thumbnails/5.jpg
+[0.664s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/materials
+[0.664s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/materials/textures
+[0.665s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/materials/textures/spotlight.jpg
+[0.665s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/materials/textures/led.jpg
+[0.665s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/model.sdf
+[0.665s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes
+[0.665s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/vi_sensor.dae
+[0.684s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/led_lamp.dae
+[0.684s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/propeller_cw.dae
+[0.684s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/propeller_ccw.dae
+[0.684s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/iris.dae
+[0.708s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/spotlight.dae
+[0.708s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/vi_sensor.jpg
+[0.708s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/x3.dae
+[0.709s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/x3.jpg
+[0.709s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/led.dae
+[0.709s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/vi_camera.jpg
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/meshes/vi_camera.dae
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3_url/model.config
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive/model.sdf
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive/model.config
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/1.jpg
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/4.jpg
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/2.jpg
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/3.jpg
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/5.jpg
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/model.sdf
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes
+[0.710s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_sensor.dae
+[0.728s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo9_propeller_ccw.dae
+[0.729s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/propeller_cw.dae
+[0.729s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/propeller_ccw.dae
+[0.729s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/iris.dae
+[0.752s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_sensor.jpg
+[0.752s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/firefly.dae
+[0.757s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/x3.dae
+[0.757s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo11_propeller_ccw.dae
+[0.758s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/x3.jpg
+[0.758s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_camera.jpg
+[0.758s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo11.dae
+[0.762s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo9.dae
+[0.766s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_camera.dae
+[0.766s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/ardrone.dae
+[0.780s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo11_propeller_cw.dae
+[0.781s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/pelican.dae
+[0.783s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo9_propeller_cw.dae
+[0.786s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/hummingbird.dae
+[0.797s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/model.config
+[0.797s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ros_gz_example_description.dsv
+[0.797s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ros_gz_example_description.sh
+[0.797s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ament_index/resource_index/package_run_dependencies/ros_gz_example_description
+[0.797s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ament_index/resource_index/parent_prefix_path/ros_gz_example_description
+[0.797s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ament_prefix_path.sh
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/ament_prefix_path.dsv
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/path.sh
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/environment/path.dsv
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.bash
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.sh
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.zsh
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.dsv
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.dsv
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ament_index/resource_index/packages/ros_gz_example_description
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/cmake/ros_gz_example_descriptionConfig.cmake
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/cmake/ros_gz_example_descriptionConfig-version.cmake
+[0.798s] -- Installing: /home/benjamin/Documents/seniorProject/ros_ws/install/ros_gz_example_description/share/ros_gz_example_description/package.xml
+[0.800s] Invoked command in '/home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/benjamin/Documents/seniorProject/ros_ws/build/ros_gz_example_description
