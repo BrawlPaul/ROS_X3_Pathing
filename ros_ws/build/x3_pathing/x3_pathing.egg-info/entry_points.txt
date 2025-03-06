@@ -1,2 +1,0 @@
-[console_scripts]
-draw_square = x3_pathing.draw_square:main
