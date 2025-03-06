@@ -22,7 +22,8 @@ from launch.actions import IncludeLaunchDescription
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-
+import launch
+import launch_ros.actions
 from launch_ros.actions import Node
 
 
@@ -71,7 +72,16 @@ def generate_launch_description():
        arguments=['-d', os.path.join(pkg_project_bringup, 'config', 'x3.rviz')],
        condition=IfCondition(LaunchConfiguration('rviz'))
     )
+    # Start up robot localization
+    start_robot_localization_cmd = Node(
+    package='robot_localization',
+    executable='ekf_node',
+    name='ekf_filter_node',
+    output='screen',
+    parameters=[os.path.join(pkg_project_bringup, 'config', 'x3_ekf.yaml'), 
+    {'use_sim_time': True}])
 
+    
     # Bridge ROS topics and Gazebo messages for establishing communication
     bridge = Node(
         package='ros_gz_bridge',
@@ -89,5 +99,21 @@ def generate_launch_description():
                               description='Open RViz.'),
         bridge,
         robot_state_publisher,
-        rviz
+        rviz,
+        start_robot_localization_cmd,
+        # Static transform for IMU0
+        launch_ros.actions.Node(
+            package="tf2_ros",
+            executable="static_transform_publisher",
+            arguments=["0", "0", "0", "0", "0", "0", "x3/base_link", "x3/base_link/imu_sensor0"],
+            name="static_tf_imu1"
+        ),
+        
+        # Static transform for IMU1
+        launch_ros.actions.Node(
+            package="tf2_ros",
+            executable="static_transform_publisher",
+            arguments=["0", "0", "0", "0", "0", "0", "x3/base_link", "x3/base_link/imu_sensor1"],
+            name="static_tf_imu2"
+        )
     ])
