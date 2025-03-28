@@ -54,5 +54,14 @@
   ros_type_name: "sensor_msgs/msg/MagneticField"
   gz_type_name: "gz.msgs.Magnetometer"
   direction: GZ_TO_ROS
-
+- ros_topic_name: "/x3/scan"
+  gz_topic_name: "/model/x3/scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+- ros_topic_name: "/x3/scan/points"
+  gz_topic_name: "/model/x3/scan/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
 

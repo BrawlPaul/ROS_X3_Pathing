@@ -49,7 +49,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'x3.sdf '
-            '--render-engine ogre'
+            #'--render-engine ogre'
         ])}.items(),
     )
 
@@ -93,6 +93,12 @@ def generate_launch_description():
         output='screen'
     )
 
+    altimeterPublisher = Node(
+        package='x3_pathing',
+        executable='altimeter_publisher',
+        output='screen'
+    )
+
     return LaunchDescription([
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
@@ -101,6 +107,7 @@ def generate_launch_description():
         robot_state_publisher,
         rviz,
         start_robot_localization_cmd,
+        altimeterPublisher,
         # Static transform for IMU0
         launch_ros.actions.Node(
             package="tf2_ros",
@@ -115,5 +122,13 @@ def generate_launch_description():
             executable="static_transform_publisher",
             arguments=["0", "0", "0", "0", "0", "0", "x3/base_link", "x3/base_link/imu_sensor1"],
             name="static_tf_imu2"
+        ),
+
+        # Static transform for LIDAR
+        launch_ros.actions.Node(
+            package="tf2_ros",
+            executable="static_transform_publisher",
+            arguments=["0", "0", "0.1", "0", "0", "0", "x3/base_link", "x3/base_link/lidar"],
+            name="static_tf_lidar"
         )
     ])

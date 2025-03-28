@@ -20,7 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'draw_square = x3_pathing.draw_square:main'
+            'draw_square = x3_pathing.draw_square:main',
+            'keyboard_teleop = x3_pathing.keyboard_teleop:main',
+            'altimeter_publisher = x3_pathing.altimeter_publisher:main'
         ],
     },
 )
