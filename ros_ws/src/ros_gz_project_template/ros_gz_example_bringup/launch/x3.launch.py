@@ -35,6 +35,7 @@ def generate_launch_description():
     pkg_project_gazebo = get_package_share_directory('ros_gz_example_gazebo')
     pkg_project_description = get_package_share_directory('ros_gz_example_description')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
+    pkg_kiss_icp = get_package_share_directory('kiss_icp')
 
     # Load the SDF file from "description" package
     sdf_file  =  os.path.join(pkg_project_description, 'models', 'x3', 'model.sdf')
@@ -93,12 +94,30 @@ def generate_launch_description():
         output='screen'
     )
 
-    altimeterPublisher = Node(
+    altimeter_publisher = Node(
         package='x3_pathing',
         executable='altimeter_publisher',
         output='screen'
     )
 
+    altitude_controller = Node(
+        package='x3_pathing',
+        executable='altitude_controller',
+        output='screen'
+    )
+
+    kiss_icp = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(os.path.join(pkg_kiss_icp, 'launch', 'odometry.launch.py')),
+            launch_arguments={
+                'publish_odom_tf': 'False',
+                'base_frame': 'x3/base_link',
+                'lidar_odom_frame': 'x3/odom',
+                'invert_odom_tf': 'False',
+                'topic': '/x3/scan/points',
+                'use_sim_time': 'true'
+
+            }.items()
+    )
     return LaunchDescription([
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
@@ -107,7 +126,9 @@ def generate_launch_description():
         robot_state_publisher,
         rviz,
         start_robot_localization_cmd,
-        altimeterPublisher,
+        altimeter_publisher,
+        altitude_controller,
+        kiss_icp,
         # Static transform for IMU0
         launch_ros.actions.Node(
             package="tf2_ros",

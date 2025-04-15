@@ -1,0 +1,3 @@
+[submodule "ros_ws/src/ros_gz_project_template/kiss-icp"]
+	path = ros_ws/src/ros_gz_project_template/kiss-icp
+	url = https://github.com/PRBonn/kiss-icp.git

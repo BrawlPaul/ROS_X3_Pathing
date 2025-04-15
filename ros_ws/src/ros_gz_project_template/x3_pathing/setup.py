@@ -22,7 +22,8 @@ setup(
         'console_scripts': [
             'draw_square = x3_pathing.draw_square:main',
             'keyboard_teleop = x3_pathing.keyboard_teleop:main',
-            'altimeter_publisher = x3_pathing.altimeter_publisher:main'
+            'altimeter_publisher = x3_pathing.altimeter_publisher:main',
+            'altitude_controller = x3_pathing.altitude_controller:main'
         ],
     },
 )
