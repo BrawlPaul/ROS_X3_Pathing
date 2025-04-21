@@ -36,6 +36,8 @@ def generate_launch_description():
     pkg_project_description = get_package_share_directory('ros_gz_example_description')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
     pkg_kiss_icp = get_package_share_directory('kiss_icp')
+    pkg_nav2 = os.path.join(get_package_share_directory('nav2_bringup'), 'launch', 'navigation_launch.py')
+    pkg_slam = os.path.join(get_package_share_directory('slam_toolbox'), 'launch', 'online_async_launch.py')
 
     # Load the SDF file from "description" package
     sdf_file  =  os.path.join(pkg_project_description, 'models', 'x3', 'model.sdf')
@@ -117,7 +119,21 @@ def generate_launch_description():
                 'use_sim_time': 'true'
 
             }.items()
+    )   
+
+    slam_config = os.path.join(pkg_project_bringup, 'config', 'slam_params.yaml')
+    nav2_config = os.path.join(pkg_project_bringup, 'config', 'nav2_params.yaml')
+
+    slam = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(pkg_slam),
+            launch_arguments={'slam_params_file': slam_config}.items()
     )
+
+    nav2 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(pkg_nav2),
+        launch_arguments={'params_file': nav2_config}.items()
+    )
+
     return LaunchDescription([
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
@@ -125,7 +141,6 @@ def generate_launch_description():
         bridge,
         robot_state_publisher,
         rviz,
-        start_robot_localization_cmd,
         altimeter_publisher,
         altitude_controller,
         kiss_icp,
@@ -144,6 +159,14 @@ def generate_launch_description():
             arguments=["0", "0", "0", "0", "0", "0", "x3/base_link", "x3/base_link/imu_sensor1"],
             name="static_tf_imu2"
         ),
+        
+        # Static transform for altimeter
+        launch_ros.actions.Node(
+            package="tf2_ros",
+            executable="static_transform_publisher",
+            arguments=["0", "0", "0", "0", "0", "0", "x3/base_link", "x3/base_link/altimeter"],
+            name="static_tf_altimeter"
+        ),
 
         # Static transform for LIDAR
         launch_ros.actions.Node(
@@ -151,5 +174,9 @@ def generate_launch_description():
             executable="static_transform_publisher",
             arguments=["0", "0", "0.1", "0", "0", "0", "x3/base_link", "x3/base_link/lidar"],
             name="static_tf_lidar"
-        )
+        ),
+
+        start_robot_localization_cmd,
+        nav2,
+        slam
     ])

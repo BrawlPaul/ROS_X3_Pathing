@@ -1,0 +1,16 @@
+slam_toolbox:
+  ros__parameters:
+    odom_frame: "x3/odom"
+    map_frame: "map"
+    base_frame: "x3/base_link"
+
+    scan_topic: "/x3/scan"
+    odom_topic: "/odometry/filtered"
+    use_odometry: true
+
+    publish_map: true
+    map_publish_period: 1.0
+    resolution: 0.05
+    mode: "mapping"
+    min_laser_range: 0.08 #for rastering images
+    max_laser_range: 30.0 #for rastering images

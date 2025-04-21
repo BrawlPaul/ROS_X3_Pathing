@@ -8,10 +8,10 @@ class AltitudeController(Node):
     def __init__(self):
         super().__init__('altituide_controller')
 
-        #PID Constants (Temp values from chat gpt)
-        self.kp = 2.5
-        self.ki = 0.02
-        self.kd = 0.6
+        #PID Constants
+        self.kp = 1.0
+        self.ki = 0.0007
+        self.kd = 0.3
         self.twist = Twist()
 
 
@@ -26,7 +26,7 @@ class AltitudeController(Node):
         self.cmd_pub = self.create_publisher(Twist, '/x3/cmd_vel', 10)
         
         # TODO utilize ICP + Localization odom
-        self.odom_sub = self.create_subscription(Odometry, '/x3/odometry', self.odom_callback, 10)
+        self.odom_sub = self.create_subscription(Odometry, 'x3/altimeter/pose', self.odom_callback, 10)
         self.cmd_sub = self.create_subscription(Twist, '/x3/alt_controller/cmd_vel', self.cmd_callback, 10)
 
     def odom_callback(self, msg):

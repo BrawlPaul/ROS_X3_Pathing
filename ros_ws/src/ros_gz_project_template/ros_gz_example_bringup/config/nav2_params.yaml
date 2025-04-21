@@ -1,0 +1,65 @@
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: true
+    odom_frame: x3/odom
+    base_frame: x3/base_link
+    map_frame: map
+    publish_map_to_odom: true
+    resolution: 0.05
+    map_update_interval: 2.0
+    use_scan_matching: true
+    enable_interactive_mode: false
+    mode: mapping  # or 'localization' if you're using a saved map
+
+bt_navigator:
+  ros__parameters:
+    use_sim_time: true
+    global_frame: x3/odom
+    robot_base_frame: x3/base_link
+
+controller_server:
+  ros__parameters:
+    use_sim_time: true
+    robot_base_frame: x3/base_link
+    global_frame: x3/odom
+
+planner_server:
+  ros__parameters:
+    use_sim_time: true
+    robot_base_frame: x3/base_link
+    global_frame: x3/odom
+
+recoveries_server:
+  ros__parameters:
+    use_sim_time: true
+    robot_base_frame: x3/base_link
+    global_frame: x3/odom
+
+map_server:
+  ros__parameters:
+    use_sim_time: true
+    yaml_filename: ""  # Not used in SLAM, but leave if you switch to localization
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: true
+      global_frame: x3/odom
+      robot_base_frame: x3/base_link
+      update_frequency: 10.0
+      publish_frequency: 5.0
+      resolution: 0.05
+      footprint: "[[0.2, 0.2], [0.2, -0.2], [-0.2, -0.2], [-0.2, 0.2]]"
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      use_sim_time: true
+      global_frame: x3/odom
+      robot_base_frame: x3/base_link
+      update_frequency: 10.0
+      publish_frequency: 5.0
+      resolution: 0.05
+      footprint: "[[0.2, 0.2], [0.2, -0.2], [-0.2, -0.2], [-0.2, 0.2]]"
+      plugins: ["obstacle_layer", "inflation_layer"]

@@ -23,7 +23,7 @@ class DrawSquare(Node):
         # Remember that the 'create_publisher' function takes in three arguments
         # Message Type | Topic Name | Queue Length
         # Fill in those values here
-        self.publisher_ = self.create_publisher(Twist, 'x3/cmd_vel', 10)
+        self.publisher_ = self.create_publisher(Twist, '/x3/alt_controller/cmd_vel', 10)
 
         # Functions running at 1Hz
         timer_period = 1.0  # seconds
