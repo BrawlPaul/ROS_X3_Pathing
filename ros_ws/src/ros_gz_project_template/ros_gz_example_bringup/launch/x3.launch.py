@@ -36,8 +36,8 @@ def generate_launch_description():
     pkg_project_description = get_package_share_directory('ros_gz_example_description')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
     pkg_kiss_icp = get_package_share_directory('kiss_icp')
-    pkg_nav2 = os.path.join(get_package_share_directory('nav2_bringup'), 'launch', 'navigation_launch.py')
-    pkg_slam = os.path.join(get_package_share_directory('slam_toolbox'), 'launch', 'online_async_launch.py')
+    # Point to additional launch file
+    pkg_nav2 = os.path.join(get_package_share_directory('ros_gz_example_bringup'), 'launch', 'navigation.launch.py')
 
     # Load the SDF file from "description" package
     sdf_file  =  os.path.join(pkg_project_description, 'models', 'x3', 'model.sdf')
@@ -52,7 +52,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'x3.sdf '
-            #'--render-engine ogre'
+            '--render-engine ogre'
         ])}.items(),
     )
 
@@ -121,18 +121,12 @@ def generate_launch_description():
             }.items()
     )   
 
-    slam_config = os.path.join(pkg_project_bringup, 'config', 'slam_params.yaml')
-    nav2_config = os.path.join(pkg_project_bringup, 'config', 'nav2_params.yaml')
-
-    slam = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(pkg_slam),
-            launch_arguments={'slam_params_file': slam_config}.items()
-    )
 
     nav2 = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(pkg_nav2),
-        launch_arguments={'params_file': nav2_config}.items()
+        PythonLaunchDescriptionSource(pkg_nav2)
     )
+
+
 
     return LaunchDescription([
         gz_sim,
@@ -177,6 +171,5 @@ def generate_launch_description():
         ),
 
         start_robot_localization_cmd,
-        nav2,
-        slam
+        # nav2,
     ])

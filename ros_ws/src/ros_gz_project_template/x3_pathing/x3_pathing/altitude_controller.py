@@ -1,6 +1,8 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
+from geometry_msgs.msg import TwistStamped
+
 from nav_msgs.msg import Odometry
 
 
@@ -27,7 +29,7 @@ class AltitudeController(Node):
         
         # TODO utilize ICP + Localization odom
         self.odom_sub = self.create_subscription(Odometry, 'x3/altimeter/pose', self.odom_callback, 10)
-        self.cmd_sub = self.create_subscription(Twist, '/x3/alt_controller/cmd_vel', self.cmd_callback, 10)
+        self.cmd_sub = self.create_subscription(TwistStamped, 'cmd_vel', self.cmd_callback, 10)
 
     def odom_callback(self, msg):
         # Get the current altitude
@@ -66,7 +68,7 @@ class AltitudeController(Node):
 
     def cmd_callback(self, msg):
         #Get the current velocity cmd
-        self.twist = msg
+        self.twist = msg.twist
 def main(args=None):
     rclpy.init(args=args)
     node = AltitudeController()
