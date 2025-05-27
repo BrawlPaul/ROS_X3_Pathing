@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="main">
+  <BehaviorTree ID="main">
+    <Sequence>
+      <Sequence>
+        <GetTakeoffLocation startX="{startX}"
+                            startY="{startY}"/>
+        <SetAltitude z="1.5"
+                     cur_alt="{cur_alt}"/>
+      </Sequence>
+      <Sequence>
+        <GetNextWayPoint x="{x}"
+                         y="{y}"
+                         z="{z}"/>
+        <Fallback>
+          <CheckAltitude cur_alt="{cur_alt}"
+                         z="{z}"/>
+          <Sequence>
+            <SetAltitude z="{z}"
+                         cur_alt="{cur_alt}"/>
+            <LoadMap cur_alt="{cur_alt}"/>
+          </Sequence>
+        </Fallback>
+        <SetNavGoal x="{x}"
+                    y="{y}"/>
+        <Fallback>
+          <SetNavGoal x="{x}"
+                      y="{y}"/>
+          <Sequence>
+            <SetNavGoal x="{startX}"
+                        y="{startY}"/>
+            <SetAltitude z="0"
+                         cur_alt="{cur_alt}"/>
+          </Sequence>
+        </Fallback>
+        <Inverter>
+          <CheckBattery _description="Returns SUCCESS if battery is good, otherwise returns FAILURE"/>
+        </Inverter>
+      </Sequence>
+      <Sequence>
+        <SetNavGoal x="{startX}"
+                    y="{startY}"/>
+        <SetAltitude z="0"
+                     cur_alt="{cur_alt}"/>
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="CheckAltitude"
+            editable="true">
+      <input_port name="cur_alt"/>
+      <input_port name="z"/>
+    </Action>
+    <Action ID="CheckBattery"
+            editable="true"/>
+    <Action ID="GetNextWayPoint"
+            editable="true">
+      <output_port name="x"/>
+      <output_port name="y"/>
+      <output_port name="z"/>
+    </Action>
+    <Action ID="GetTakeoffLocation"
+            editable="true">
+      <output_port name="startX"/>
+      <output_port name="startY"/>
+    </Action>
+    <Action ID="LoadMap"
+            editable="true">
+      <input_port name="cur_alt"/>
+    </Action>
+    <Action ID="SetAltitude"
+            editable="true">
+      <input_port name="z"/>
+      <output_port name="cur_alt"/>
+    </Action>
+    <Action ID="SetNavGoal"
+            editable="true">
+      <input_port name="x"/>
+      <input_port name="y"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

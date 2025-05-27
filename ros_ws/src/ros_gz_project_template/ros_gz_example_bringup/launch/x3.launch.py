@@ -22,7 +22,6 @@ from launch.actions import IncludeLaunchDescription
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-import launch
 import launch_ros.actions
 from launch_ros.actions import Node
 
@@ -52,7 +51,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'x3.sdf '
-            '--render-engine ogre'
+            #'--render-engine ogre'
         ])}.items(),
     )
 
