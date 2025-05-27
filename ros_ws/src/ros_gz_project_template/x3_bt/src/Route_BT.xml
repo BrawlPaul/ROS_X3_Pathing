@@ -35,7 +35,8 @@
           </Sequence>
         </Fallback>
         <Inverter>
-          <CheckBattery _description="Returns SUCCESS if battery is good, otherwise returns FAILURE"/>
+          <CheckBattery battery_level="{battery_level}"
+                        _description="Returns SUCCESS if battery is good, otherwise returns FAILURE"/>
         </Inverter>
       </Sequence>
       <Sequence>
@@ -55,7 +56,9 @@
       <input_port name="z"/>
     </Action>
     <Action ID="CheckBattery"
-            editable="true"/>
+            editable="true">
+      <output_port name="battery_level"/>
+    </Action>
     <Action ID="GetNextWayPoint"
             editable="true">
       <output_port name="x"/>
