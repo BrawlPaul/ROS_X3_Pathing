@@ -17,7 +17,12 @@ def generate_launch_description():
                 'params_file': nav2_config
             }.items()
         )
+    pkg_nav2_rviz = os.path.join(get_package_share_directory('nav2_bringup'), 'launch', 'rviz_launch.py')
+    nav2_rviz = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(pkg_nav2_rviz)
+    )
     
     return LaunchDescription([
-        nav2
+        nav2,
+        nav2_rviz
     ])

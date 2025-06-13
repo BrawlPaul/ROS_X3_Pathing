@@ -1,10 +1,11 @@
+import asyncio
 import time
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import TwistStamped
 from rclpy.action import ActionServer
-from x3_pathing.action import setHeight
+from x3_interfaces.action import SetHeight
 
 from nav_msgs.msg import Odometry
 
@@ -20,7 +21,7 @@ class AltitudeController(Node):
         self.twist = Twist()
 
 
-        self.target_alt = 0
+        self.target_alt = 1.5
         self.cur_alt = 0
 
         self.prev_error = 0.0
@@ -37,40 +38,26 @@ class AltitudeController(Node):
         #Create action server to recv height requests
         self._action_server = ActionServer(
             self,
-            setHeight,
-            'set_height',
-            self.set_height,
-            self.cancel_request
+            SetHeight,
+            '/set_height',
+            self.set_height
         )
 
-    async def set_height(self, goal_handle):
-            self.get_logger().info(f"Received goal request to set height to {goal_handle.request.target_height} meters.")
-
-            #Set new height
+    def set_height(self, goal_handle):
             self.target_alt = goal_handle.request.target_height
+            self.get_logger().info(f"Received goal request to set height to {self.target_alt} meters.")
 
-            feedback_msg = setHeight.Feedback()
-
-            while ((self.cur_alt < (self.target_alt-0.05) or (self.cur_alt > (self.target_alt+0.05)))): #make sure height is +/- 0.05 meters of goal
-                feedback_msg.current_height = self.cur_alt
-                goal_handle.publish_feedback(feedback_msg)
-                time.sleep(0.25) #sleep for 0.25 seconds
-
-            result_msg = setHeight.Result()
-            result_msg.success = True
-            result_msg.current_height = self.target_alt
-            goal_handle.succeed(result_msg)
+            result_msg = SetHeight.Result()
+            result_msg.final_height = self.target_alt
+            goal_handle.succeed()
 
             self.get_logger().info(f"Successfully set height to {self.target_alt} meters.")
 
             return result_msg
-            
-    async def cancel_callback(self, goal_handle):
-        self.get_logger().info(f"Goal {goal_handle.goal_id} was canceled.")
-        return True
 
 
     def odom_callback(self, msg):
+        #self.get_logger().info("ODOM CALLBACK")
         # Get the current altitude
         self.cur_alt = msg.pose.pose.position.z
         
@@ -108,6 +95,7 @@ class AltitudeController(Node):
     def cmd_callback(self, msg):
         #Get the current velocity cmd
         self.twist = msg.twist
+
 def main(args=None):
     rclpy.init(args=args)
     node = AltitudeController()

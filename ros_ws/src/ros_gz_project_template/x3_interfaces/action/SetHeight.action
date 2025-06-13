@@ -1,10 +1,10 @@
-# setHeight.action
+# SetHeight.action
 # Goal
 float64 target_height  # Desired height to set (in meters)
 
 ---
 # Result
-bool success  # Whether the operation was successful or not
+float64 final_height  # Whether the operation was successful or not
 
 ---
 # Feedback

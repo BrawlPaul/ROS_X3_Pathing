@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/x3_interfaces/include/**",
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/behaviortree_ros2/include/**",
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/btcpp_ros2_interfaces/include/**",
+        "/opt/ros/jazzy/include/**",
+        "/home/benjamin/Documents/seniorProject/ros_ws/src/ros_gz_project_template/BehaviorTree.ROS2/behaviortree_ros2/include/**",
+        "/home/benjamin/Documents/seniorProject/ros_ws/src/ros_gz_project_template/ros_gz_example_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

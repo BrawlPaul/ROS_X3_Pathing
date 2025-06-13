@@ -51,7 +51,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'x3.sdf '
-            #'--render-engine ogre'
+            '--render-engine ogre'
         ])}.items(),
     )
 
@@ -170,5 +170,5 @@ def generate_launch_description():
         ),
 
         start_robot_localization_cmd,
-        # nav2,
+        #nav2,
     ])

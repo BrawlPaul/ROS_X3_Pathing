@@ -1,0 +1,16 @@
+{
+    "cmake.sourceDirectory": "/home/benjamin/Documents/seniorProject/ros_ws/src/ros_gz_project_template/ros_gz_example_bringup",
+    "ros.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/x3_pathing/lib/python3.12/site-packages",
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/x3_interfaces/lib/python3.12/site-packages",
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/btcpp_ros2_interfaces/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/x3_pathing/lib/python3.12/site-packages",
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/x3_interfaces/lib/python3.12/site-packages",
+        "/home/benjamin/Documents/seniorProject/ros_ws/install/btcpp_ros2_interfaces/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}
