@@ -12,19 +12,17 @@
       <KeepRunningUntilFailure>
         <Sequence>
           <GetNextWayPoint x="{x}"
-                          y="{y}"
-                          z="{z}"/>
+                           y="{y}"
+                           z="{z}"/>
           <Fallback>
             <CheckAltitude cur_alt="{cur_alt}"
-                          z="{z}"/>
+                           z="{z}"/>
             <Sequence>
               <SetAltitude z="{z}"
-                          cur_alt="{cur_alt}"/>
+                           cur_alt="{cur_alt}"/>
               <LoadMap cur_alt="{cur_alt}"/>
             </Sequence>
           </Fallback>
-          <SetNavGoal x="{x}"
-                      y="{y}"/>
           <Fallback>
             <SetNavGoal x="{x}"
                         y="{y}"/>
@@ -32,7 +30,7 @@
               <SetNavGoal x="{startX}"
                           y="{startY}"/>
               <SetAltitude z="0"
-                          cur_alt="{cur_alt}"/>
+                           cur_alt="{cur_alt}"/>
             </Sequence>
           </Fallback>
           <CheckBattery battery_level="{battery_level}"
@@ -43,7 +41,7 @@
         <SetNavGoal x="{startX}"
                     y="{startY}"/>
         <SetAltitude z="0"
-                    cur_alt="{cur_alt}"/>
+                     cur_alt="{cur_alt}"/>
       </Sequence>
     </Sequence>
   </BehaviorTree>
